@@ -29,7 +29,7 @@ const menuItems = [
     price: 75.0,
     rating: 4.9,
     category: "Special Treats",
-    image: "https://source.unsplash.com/800x600/?lobster-thermidor",
+    image: "/lobster-thermidor.webp",
   },
   {
     id: "special-4",
@@ -37,7 +37,7 @@ const menuItems = [
     price: 68.0,
     rating: 4.8,
     category: "Special Treats",
-    image: "https://source.unsplash.com/800x600/?beef-wellington",
+    image: "/beef-ellington.avif",
   },
   {
     id: "special-5",
@@ -45,7 +45,7 @@ const menuItems = [
     price: 90.0,
     rating: 4.9,
     category: "Special Treats",
-    image: "https://source.unsplash.com/800x600/?foie-gras",
+    image: "/foie-gras.avif",
   },
   {
     id: "special-6",
@@ -53,7 +53,7 @@ const menuItems = [
     price: 120.0,
     rating: 4.7,
     category: "Special Treats",
-    image: "https://source.unsplash.com/800x600/?caviar",
+    image: "/caviar-service.avif",
   },
   {
     id: "mezze-1",
