@@ -1,14 +1,11 @@
 "use client"
-
 import { useState } from "react"
 import { ShoppingCartIcon, StarIcon } from "./icons"
 import FoodDetailModal from "./food-detail-modal"
-
 interface MenuSectionProps {
   onAddToCart: (item: any) => void
   onShowToast?: (message: string) => void
 }
-
 const menuItems = [
   {
     id: "special-1",
@@ -27,6 +24,38 @@ const menuItems = [
     image: "/creamy-truffle-risotto.jpg",
   },
   {
+    id: "special-3",
+    name: "Lobster Thermidor",
+    price: 75.0,
+    rating: 4.9,
+    category: "Special Treats",
+    image: "https://source.unsplash.com/800x600/?lobster-thermidor",
+  },
+  {
+    id: "special-4",
+    name: "Beef Wellington",
+    price: 68.0,
+    rating: 4.8,
+    category: "Special Treats",
+    image: "https://source.unsplash.com/800x600/?beef-wellington",
+  },
+  {
+    id: "special-5",
+    name: "Foie Gras",
+    price: 90.0,
+    rating: 4.9,
+    category: "Special Treats",
+    image: "https://source.unsplash.com/800x600/?foie-gras",
+  },
+  {
+    id: "special-6",
+    name: "Caviar Service",
+    price: 120.0,
+    rating: 4.7,
+    category: "Special Treats",
+    image: "https://source.unsplash.com/800x600/?caviar",
+  },
+  {
     id: "mezze-1",
     name: "Hummus Platter",
     price: 22.0,
@@ -43,6 +72,38 @@ const menuItems = [
     image: "/crispy-falafel-balls.jpg",
   },
   {
+    id: "mezze-3",
+    name: "Baba Ganoush",
+    price: 20.0,
+    rating: 4.6,
+    category: "Mezzas",
+    image: "https://source.unsplash.com/800x600/?baba-ganoush",
+  },
+  {
+    id: "mezze-4",
+    name: "Tabouli Salad",
+    price: 16.0,
+    rating: 4.7,
+    category: "Mezzas",
+    image: "https://source.unsplash.com/800x600/?tabouli-salad",
+  },
+  {
+    id: "mezze-5",
+    name: "Stuffed Grape Leaves",
+    price: 18.0,
+    rating: 4.5,
+    category: "Mezzas",
+    image: "https://source.unsplash.com/800x600/?stuffed-grape-leaves",
+  },
+  {
+    id: "mezze-6",
+    name: "Labneh Dip",
+    price: 15.0,
+    rating: 4.8,
+    category: "Mezzas",
+    image: "https://source.unsplash.com/800x600/?labneh",
+  },
+  {
     id: "sides-1",
     name: "Garlic Bread",
     price: 12.0,
@@ -57,6 +118,38 @@ const menuItems = [
     rating: 4.7,
     category: "Sides",
     image: "/golden-onion-rings.jpg",
+  },
+  {
+    id: "sides-3",
+    name: "French Fries",
+    price: 10.0,
+    rating: 4.6,
+    category: "Sides",
+    image: "https://source.unsplash.com/800x600/?french-fries",
+  },
+  {
+    id: "sides-4",
+    name: "Greek Salad",
+    price: 12.0,
+    rating: 4.7,
+    category: "Sides",
+    image: "https://source.unsplash.com/800x600/?greek-salad",
+  },
+  {
+    id: "sides-5",
+    name: "Coleslaw",
+    price: 8.0,
+    rating: 4.5,
+    category: "Sides",
+    image: "https://source.unsplash.com/800x600/?coleslaw",
+  },
+  {
+    id: "sides-6",
+    name: "Mashed Potatoes",
+    price: 11.0,
+    rating: 4.8,
+    category: "Sides",
+    image: "https://source.unsplash.com/800x600/?mashed-potatoes",
   },
   {
     id: "app-1",
@@ -107,26 +200,20 @@ const menuItems = [
     image: "/lunch-combo-with-vegetables.jpg",
   },
 ]
-
 const categories = ["Special Treats", "Mezzas", "Sides", "Appetizers", "Drinks", "Lunch", "More Items"]
-
 export default function MenuSection({ onAddToCart, onShowToast }: MenuSectionProps) {
   const [selectedCategory, setSelectedCategory] = useState("Special Treats")
   const [selectedFood, setSelectedFood] = useState<any>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
-
   const filteredItems = menuItems.filter((item) => item.category === selectedCategory)
-
   const handleFoodClick = (food: any) => {
     setSelectedFood(food)
     setIsModalOpen(true)
   }
-
   const handleAddToCart = (item: any) => {
     onAddToCart(item)
     onShowToast?.(`${item.name} added to cart!`)
   }
-
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -137,7 +224,6 @@ export default function MenuSection({ onAddToCart, onShowToast }: MenuSectionPro
             Explore our diverse menu with carefully curated dishes from around the world
           </p>
         </div>
-
         {/* Category Tabs */}
         <div className="flex flex-wrap gap-3 justify-center mb-12 animate-fade-in-up">
           {categories.map((category) => (
@@ -154,7 +240,6 @@ export default function MenuSection({ onAddToCart, onShowToast }: MenuSectionPro
             </button>
           ))}
         </div>
-
         {/* Menu Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item, index) => (
@@ -178,7 +263,6 @@ export default function MenuSection({ onAddToCart, onShowToast }: MenuSectionPro
                   <span className="font-semibold text-xs">{item.rating}</span>
                 </div>
               </div>
-
               {/* Content */}
               <div className="p-4">
                 <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
@@ -201,7 +285,6 @@ export default function MenuSection({ onAddToCart, onShowToast }: MenuSectionPro
           ))}
         </div>
       </div>
-
       {/* Food Detail Modal */}
       <FoodDetailModal
         isOpen={isModalOpen}
