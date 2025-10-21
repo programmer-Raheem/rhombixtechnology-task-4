@@ -9,7 +9,7 @@ export default function MobileApp() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Image */}
           <div className="animate-slide-in-left">
-            <img src="/placeholder.svg?height=500&width=300" alt="Mobile App" className="w-full max-w-sm mx-auto" />
+            <img src="/mobile.webp" alt="Mobile App" className="w-full max-w-sm mx-auto" />
           </div>
 
           {/* Right Content */}
