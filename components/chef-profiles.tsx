@@ -5,25 +5,25 @@ const chefs = [
     id: 1,
     name: "Samantha Nguyen",
     role: "Head Chef",
-    image: "/professional-chef-in-white-uniform.jpg",
+    image: "/chef1.webp",
   },
   {
     id: 2,
     name: "Esther Howard",
     role: "Pastry Chef",
-    image: "/professional-pastry-chef.jpg",
+    image: "/chef2.webp",
   },
   {
     id: 3,
     name: "Marvin McKinney",
     role: "Sous Chef",
-    image: "/professional-sous-chef.jpg",
+    image: "/chef3.webp",
   },
   {
     id: 4,
     name: "Albert Flores",
     role: "Executive Chef",
-    image: "/professional-executive-chef.jpg",
+    image: "/chef4.webp",
   },
 ]
 
