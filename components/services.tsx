@@ -67,7 +67,7 @@ export default function Services() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl"></div>
               <img
-                src="/placeholder.svg?height=500&width=500"
+                src="/food.avif"
                 alt="Chef in kitchen"
                 className="w-full rounded-3xl shadow-2xl relative z-10"
               />
