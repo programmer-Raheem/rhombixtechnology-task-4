@@ -29,7 +29,7 @@ const menuItems = [
     price: 75.0,
     rating: 4.9,
     category: "Special Treats",
-    image: "/lobster-thermidor.webp",
+    image: "/Lobster-hermidor.webp",
   },
   {
     id: "special-4",
