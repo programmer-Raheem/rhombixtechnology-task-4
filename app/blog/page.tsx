@@ -31,7 +31,7 @@ export default function BlogPage() {
       author: "Chef Marcus",
       date: "March 15, 2024",
       category: "Cooking Tips",
-      image: "/blog-pasta.jpg",
+      image: "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg",
       readTime: "5 min read",
     },
     {
@@ -43,7 +43,7 @@ export default function BlogPage() {
       author: "Sarah Johnson",
       date: "March 10, 2024",
       category: "Sustainability",
-      image: "/blog-farm.jpg",
+      image: "https://images.pexels.com/photos/34954401/pexels-photo-34954401.jpeg",
       readTime: "4 min read",
     },
     {
@@ -55,7 +55,7 @@ export default function BlogPage() {
       author: "David Lee",
       date: "March 5, 2024",
       category: "Culinary Techniques",
-      image: "/blog-spices.jpg",
+      image: "https://images.pexels.com/photos/3051576/pexels-photo-3051576.jpeg",
       readTime: "6 min read",
     },
     {
@@ -67,7 +67,7 @@ export default function BlogPage() {
       author: "Emma Wilson",
       date: "February 28, 2024",
       category: "Beverages",
-      image: "/blog-wine.jpg",
+      image: "https://images.pexels.com/photos/5086617/pexels-photo-5086617.jpeg",
       readTime: "7 min read",
     },
     {
@@ -79,7 +79,7 @@ export default function BlogPage() {
       author: "Emma Wilson",
       date: "February 20, 2024",
       category: "Desserts",
-      image: "/blog-dessert.jpg",
+      image: "https://images.pexels.com/photos/5463887/pexels-photo-5463887.jpeg",
       readTime: "5 min read",
     },
     {
@@ -91,7 +91,7 @@ export default function BlogPage() {
       author: "Chef Marcus",
       date: "February 15, 2024",
       category: "Food History",
-      image: "/blog-mediterranean.jpg",
+      image: "https://images.pexels.com/photos/34973513/pexels-photo-34973513.jpeg",
       readTime: "8 min read",
     },
   ]

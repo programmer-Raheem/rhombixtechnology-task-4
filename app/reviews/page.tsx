@@ -20,7 +20,7 @@ export default function ReviewsPage() {
       date: "2 weeks ago",
       comment:
         "Absolutely amazing experience! The food was delicious and the service was impeccable. Highly recommend!",
-      image: "/reviewer-1.jpg",
+      image: "https://images.pexels.com/photos/7035514/pexels-photo-7035514.jpeg",
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ export default function ReviewsPage() {
       rating: 4.5,
       date: "1 month ago",
       comment: "Great restaurant with authentic flavors. The ambiance is perfect for a romantic dinner.",
-      image: "/reviewer-2.jpg",
+      image: "https://images.pexels.com/photos/3799786/pexels-photo-3799786.jpeg",
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ export default function ReviewsPage() {
       date: "1 month ago",
       comment:
         "Best dining experience I've had in years. Every dish was perfectly prepared. Will definitely come back!",
-      image: "/reviewer-3.jpg",
+      image: "https://images.pexels.com/photos/31444630/pexels-photo-31444630.jpeg",
     },
     {
       id: 4,
@@ -45,7 +45,7 @@ export default function ReviewsPage() {
       rating: 4,
       date: "2 months ago",
       comment: "Good food and friendly staff. A bit pricey but worth it for the quality.",
-      image: "/reviewer-4.jpg",
+      image: "https://images.pexels.com/photos/8058738/pexels-photo-8058738.jpeg",
     },
   ])
 

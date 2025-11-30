@@ -1,13 +1,26 @@
-"use client"
+"use client";
 
-import { ChevronLeftIcon, ChevronRightIcon, StarIcon, ShoppingCartIcon } from "./icons"
-import { useState } from "react"
+import { useState, useEffect } from "react";
+import { ChevronLeftIcon, ChevronRightIcon, StarIcon, ShoppingCartIcon } from "./icons";
 
-interface PopularDishesProps {
-  onAddToCart: (item: any) => void
+// Type for a single dish
+export interface Dish {
+  id: string;
+  name: string;
+  price: number;
+  rating: number;
+  reviews: number;
+  image: string;
+  description: string;
 }
 
-const dishes = [
+// Props for component
+interface PopularDishesProps {
+  onAddToCart: (item: Dish) => void;
+}
+
+// Sample dishes data (static, so SSR is fine)
+const dishes: Dish[] = [
   {
     id: "pasta",
     name: "Pasta Carbonara",
@@ -44,20 +57,32 @@ const dishes = [
     image: "/spicy-fish-curry-in-red-sauce.jpg",
     description: "Rich and aromatic fish curry",
   },
-]
+];
 
 export default function PopularDishes({ onAddToCart }: PopularDishesProps) {
-  const [scrollPosition, setScrollPosition] = useState(0)
+  const [scrollPosition, setScrollPosition] = useState<number>(0);
+  const [mounted, setMounted] = useState(false);
+
+  // Mark component as mounted (client-side) to avoid SSR mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const scroll = (direction: "left" | "right") => {
-    const container = document.getElementById("dishes-scroll")
-    if (container) {
-      const scrollAmount = 320
-      const newPosition = direction === "left" ? scrollPosition - scrollAmount : scrollPosition + scrollAmount
-      container.scrollTo({ left: newPosition, behavior: "smooth" })
-      setScrollPosition(newPosition)
-    }
-  }
+    if (!mounted) return; // Only scroll on client
+    const container = document.getElementById("dishes-scroll");
+    if (!container) return;
+
+    const scrollAmount = 320;
+    const newPosition =
+      direction === "left" ? scrollPosition - scrollAmount : scrollPosition + scrollAmount;
+
+    container.scrollTo({ left: newPosition, behavior: "smooth" });
+    setScrollPosition(newPosition);
+  };
+
+  // Don't render until mounted on client
+  if (!mounted) return null;
 
   return (
     <section className="py-16 md:py-24 bg-surface">
@@ -133,5 +158,5 @@ export default function PopularDishes({ onAddToCart }: PopularDishesProps) {
         </div>
       </div>
     </section>
-  )
+  );
 }
