@@ -1,0 +1,6 @@
+﻿[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NPM_VERSION = "10"
