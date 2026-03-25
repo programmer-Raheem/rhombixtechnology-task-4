@@ -2,7 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { MenuProvider } from "./context/MenuContext"; // <-- import
+import { MenuProvider } from "./context/MenuContext";
 
 const geistSans = Geist({ subsets: ["latin"] });
 const geistMono = Geist_Mono({ subsets: ["latin"] });
@@ -19,9 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.className} bg-background text-foreground`}>
-        <MenuProvider>{children}</MenuProvider> {/* <-- wrap children */}
+    <html lang="en" suppressHydrationWarning>
+      <body 
+        className={`${geistSans.className} bg-background text-foreground`}
+        suppressHydrationWarning
+      >
+        <MenuProvider>{children}</MenuProvider>
       </body>
     </html>
   );

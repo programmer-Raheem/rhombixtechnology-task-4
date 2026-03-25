@@ -31,7 +31,7 @@ export default function Hero({ onAddToCart }: HeroProps) {
           {/* Left Content */}
           <div className="animate-slide-in-left">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-              We Serve The Test You <span className="text-primary">Love</span>
+              We Serve The Taste You <span className="text-primary">Love</span>
             </h1>
             <p className="text-lg text-muted mb-8 leading-relaxed">
               This is a type of restaurant which typically serves food and drinks. In addition to light refreshments
